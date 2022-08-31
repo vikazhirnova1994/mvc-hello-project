@@ -38,7 +38,7 @@ public class ApplicationConfig implements WebMvcConfigurer {
         templateResolver.setPrefix("/WEB-INF/templates/");
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML); // HTML
-        templateResolver.setCacheable(true); // Template cache is true by default
+        templateResolver.setCacheable(true);
         return templateResolver;
     }
 
@@ -59,14 +59,4 @@ public class ApplicationConfig implements WebMvcConfigurer {
         resolver.setTemplateEngine(templateEngine());
         registry.viewResolver(resolver);
     }
-
- /*   @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-
-        // Css resource.
-        registry.addResourceHandler("/styles/**") //
-                .addResourceLocations("/WEB-INF/static/css/");
-
-    }*/
-
 }
